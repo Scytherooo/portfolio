@@ -229,12 +229,10 @@ h2            { font-size: clamp(1rem, 2vw, 1.5rem); }
   width: calc(100% - 320px);
   height: 100%;
   background: var(--bg);
-  opacity: 0.90;
+  opacity: 0.96;
   pointer-events: none;
   z-index: 1;
 }
-
-
 
 /* sections */
 .section, #hero { display: none; }
@@ -580,41 +578,6 @@ h2            { font-size: clamp(1rem, 2vw, 1.5rem); }
   font-family: 'Press Start 2P', monospace;
   font-size: 0.5rem;
   color: #e6f1ff;
-  line-height: 1.8;
-}
-
-.tool-bar-wrap {
-  width: 100%;
-  height: 6px;
-  background: rgba(100,255,218,0.08);
-  border: 1px solid rgba(100,255,218,0.15);
-  position: relative;
-  margin-top: 4px;
-}
-
-.tool-bar {
-  height: 100%;
-  width: 0%;
-  background: var(--accent);
-  transition: width 1.2s steps(20);
-  position: relative;
-}
-
-.tool-bar::after {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    transparent, transparent 6px,
-    rgba(10,14,26,0.5) 6px, rgba(10,14,26,0.5) 8px
-  );
-}
-
-.tool-pct {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.5rem;
-  color: var(--accent);
-  text-align: right;
   line-height: 1.8;
 }
 

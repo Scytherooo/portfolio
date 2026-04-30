@@ -49,14 +49,6 @@ function buildPixelGrid() {
   return tiles;
 }
 
-// ── animate tool bars on show ──
-function animateToolBars() {
-  document.querySelectorAll('.tool-bar').forEach(bar => {
-    const pct = bar.style.getPropertyValue('--pct');
-    bar.style.width = '0%';
-    setTimeout(() => { bar.style.width = pct; }, 200);
-  });
-}
 
 function pixelTransition(callback) {
   const tiles    = buildPixelGrid();
@@ -157,8 +149,6 @@ function showSection(id) {
     } else {
       contentArea.scrollTop = 0;
     }
-
-    if (id === 'skills') animateToolBars();
   });
 }
 
