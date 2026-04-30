@@ -98,6 +98,35 @@ function pixelTransition(callback) {
   }, 16);
 }
 
+function buildPixelGrid() {
+  const w    = overlay.offsetWidth;
+  const h    = overlay.offsetHeight;
+  const cols = Math.ceil(w / TILE);
+  const rows = Math.ceil(h / TILE);
+
+  overlay.style.gridTemplateColumns = `repeat(${cols}, ${TILE}px)`;
+  overlay.style.gridTemplateRows    = `repeat(${rows}, ${TILE}px)`;
+  overlay.innerHTML = '';
+
+  const total = cols * rows;
+  const tiles = [];
+
+  for (let i = 0; i < total; i++) {
+    const tile = document.createElement('div');
+    tile.style.cssText = `
+      width:${TILE}px;
+      height:${TILE}px;
+      background:var(--bg);
+      opacity:0;
+      transition:none;
+    `;
+    overlay.appendChild(tile);
+    tiles.push(tile);
+  }
+
+  return tiles;
+}
+
 // ── section switcher ──
 function showSection(id) {
   pixelTransition(() => {

@@ -177,13 +177,21 @@ h2            { font-size: clamp(1rem, 2vw, 1.5rem); }
 
 #pixel-transition {
   position: fixed;
-  top: 0; left: 320px;
+  top: 0;
+  left: 320px;
   width: calc(100% - 320px);
   height: 100%;
   z-index: 50;
   pointer-events: none;
   display: grid;
   opacity: 0;
+}
+
+@media (max-width: 820px) {
+  #pixel-transition {
+    left: 0;
+    width: 100%;
+  }
 }
 
 /* content */
@@ -750,4 +758,11 @@ h2            { font-size: clamp(1rem, 2vw, 1.5rem); }
   .hero-layout { flex-direction: column; align-items: flex-start; }
   .hero-character { width: 150px; align-self: center; }
   .content-video-bg, .content-bg-overlay { left: 0; width: 100%; }
+}
+
+@media (max-width: 820px) {
+  #pixel-transition {
+    left: 0;
+    width: 100%;
+  }
 }
