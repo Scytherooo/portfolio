@@ -127,8 +127,9 @@ function buildPixelGrid() {
   return tiles;
 }
 
-// ── section switcher ──
 function showSection(id) {
+  const isMobile = window.innerWidth <= 820;
+
   pixelTransition(() => {
     sections.forEach(sec => {
       sec.style.display = 'none';
@@ -137,7 +138,12 @@ function showSection(id) {
 
     const target = document.getElementById(id);
     if (target) {
-      target.style.display = id === 'hero' ? 'flex' : 'block';
+      // hero needs flex, contact and others need block
+      if (id === 'hero') {
+        target.style.display = isMobile ? 'block' : 'flex';
+      } else {
+        target.style.display = 'block';
+      }
       setTimeout(() => target.classList.add('visible'), 10);
     }
 
@@ -145,7 +151,13 @@ function showSection(id) {
       a.classList.toggle('active', a.getAttribute('href') === '#' + id);
     });
 
-    contentArea.scrollTop = 0;
+    // scroll right panel or window depending on device
+    if (isMobile) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      contentArea.scrollTop = 0;
+    }
+
     if (id === 'skills') animateToolBars();
   });
 }
