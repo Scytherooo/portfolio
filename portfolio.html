@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shawn Ashley - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="pix.png">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- LEFT PANEL -->
+  <aside class="left">
+    <div class="avatar"></div>
+    <div class="left-name">Shawn</div>
+    <div class="left-role"><span id="typed-role"></span><span class="cursor-blink">|</span></div>
+    <p class="left-bio">Driven by curiosity, I break down technology to master its core.</p>
+    <p class="left-info">Email: deguzmanshawnashley@gmail.com</p>
+    <p class="left-info">Phone: +63 912 345 6789</p>
+    <div class="socials">
+      <a href="https://github.com/Scytherooo" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/shawn-ashley-de-guzman-a2742a403/" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">Instagram</a>
+    </div>
+    <div class="avail">
+      <span class="avail-dot"></span>
+      Available for work
+    </div>
+  </aside>
+
+  <!-- RIGHT PANEL -->
+  <main class="right" id="right">
+    <div id="pixel-transition"></div>
+
+    <nav class="top-nav">
+      <ul>
+        <li><a href="#hero"       class="active">About</a></li>
+        <li><a href="#skills"              >Skills</a></li>
+        <li><a href="#experience"          >Experience</a></li>
+        <li><a href="#projects"            >Projects</a></li>
+        <li><a href="#contact"             >Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="content" id="content-area">
+
+      <video class="content-video-bg" autoplay muted loop playsinline>
+        <source src="cyberpunk-rain-city-pixel-moewalls-com.mp4" type="video/mp4">
+      </video>
+      <div class="content-bg-overlay"></div>
+
+      <!-- HERO -->
+      <section id="hero" class="reveal">
+        <div class="hero-layout">
+          <div class="hero-text">
+            <p class="hero-greeting">// Hi there, my name is</p>
+            <h1 class="hero-name">Shawn Ashley S. De Guzman</h1>
+            <p class="hero-sub">I build things for the web.</p>
+            <p class="hero-desc">
+              I’m a computer engineering graduate based in Pampanga, Philippines, with hands-on experience in PC building, hardware troubleshooting, and system development. I enjoy working on real-world problems—whether it’s fixing hardware issues, setting up networks, or building functional web applications.
+            </p>
+            <a class="about-btn" onclick="showSection('projects')">
+              View my work ↓
+            </a>
+
+            <h2 style="margin-top: 2rem;">What I'm Doing</h2>
+            <div class="doing-grid">
+
+              <div class="doing-card">
+                <div class="doing-card-bar">
+                  <span class="doing-card-bar-title">service.exe</span>
+                  <div class="doing-card-btns">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="doing-card-body">
+                  <span class="doing-icon">🌐</span>
+                  <div class="doing-title">Software Development</div>
+                  <p class="doing-desc">Building responsive and functional web applications using clean, efficient code. Focused on creating user-friendly interfaces while keeping performance and structure solid.</p>
+                </div>
+              </div>
+
+              <div class="doing-card">
+                <div class="doing-card-bar">
+                  <span class="doing-card-bar-title">service.exe</span>
+                  <div class="doing-card-btns">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="doing-card-body">
+                  <span class="doing-icon">📱</span>
+                  <div class="doing-title">Mobile Apps</div>
+                  <p class="doing-desc">Developing cross-platform mobile applications with smooth user experience, reliable performance, and practical real-world functionality.</p>
+                </div>
+              </div>
+              <div class="doing-card">
+                <div class="doing-card-bar">
+                  <span class="doing-card-bar-title">service.exe</span>
+                  <div class="doing-card-btns">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="doing-card-body">
+                  <span class="doing-icon">🔧</span>
+                  <div class="doing-title">Hardware Troubleshooting & Repair</div>
+                  <p class="doing-desc">Diagnosing and fixing hardware issues, from PC builds to system failures and network setup. Focused on identifying problems quickly and restoring systems efficiently.</p>
+                </div>
+              </div>
+                            <div class="doing-card">
+                <div class="doing-card-bar">
+                  <span class="doing-card-bar-title">service.exe</span>
+                  <div class="doing-card-btns">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <div class="doing-card-body">
+                  <span class="doing-icon">🔧</span>
+                  <div class="doing-title">Hardware Development</div>
+                  <p class="doing-desc">Designing and assembling circuits from the ground up, turning ideas into working hardware through experimentation, testing, and iteration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-character">
+            <canvas id="character-canvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section reveal">
+        <p class="section-tag">02 &nbsp; skills</p>
+        <h2>Technologies I use</h2>
+        <p class="lead">Here are some of the tools and technologies I've been working with:</p>
+        <div class="skills-list">
+          <div class="skill-item">HTML & CSS</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">C#</div>
+          <div class="skill-item">Python</div>
+          <div class="skill-item">PHP</div>
+          <div class="skill-item">MongoDB & PostgreSQL</div>
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">Clip Studio Paint</div>
+          <div class="skill-item">Flutter Native Dart</div>
+          <div class="skill-item">Android Studio</div>
+          <div class="skill-item">Visual Basic & Studio</div>
+          <div class="skill-item">Hardware Tools</div>
+
+        </div>
+        <h2 style="margin-top: 2.5rem;">Most Used</h2>
+          <div class="tools-grid">
+            <a class="tool-card" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+              <div class="tool-logo">
+                <span style="color:#e44d26">HTML</span>
+                <span style="color:#264de4">CSS</span>
+              </div>
+              <div class="tool-name">HTML & CSS</div>
+              <div class="tool-bar-wrap"><div class="tool-bar" style="--pct:95%"></div></div>
+              <div class="tool-pct">95%</div>
+            </a>
+
+            <a class="tool-card" href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
+              <div class="tool-logo">
+                <span style="color:#9b59b6">C#</span>
+              </div>
+              <div class="tool-name">C#</div>
+              <div class="tool-bar-wrap"><div class="tool-bar" style="--pct:90%"></div></div>
+              <div class="tool-pct">90%</div>
+            </a>
+
+            <a class="tool-card" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+              <div class="tool-logo">
+                <span style="color:#f7df1e">JS</span>
+              </div>
+              <div class="tool-name">JavaScript</div>
+              <div class="tool-bar-wrap"><div class="tool-bar" style="--pct:85%"></div></div>
+              <div class="tool-pct">85%</div>
+            </a>
+
+            <a class="tool-card" href="https://www.clipstudio.net" target="_blank">
+              <div class="tool-logo">
+                <span style="color:#00bcd4">CSP</span>
+              </div>
+              <div class="tool-name">Clip Studio Paint</div>
+              <div class="tool-bar-wrap"><div class="tool-bar" style="--pct:75%"></div></div>
+              <div class="tool-pct">75%</div>
+            </a>
+
+            <a class="tool-card" href="https://www.python.org" target="_blank">
+              <div class="tool-logo">
+                <span style="color:#f7df1e">PY</span>
+              </div>
+              <div class="tool-name">Python</div>
+              <div class="tool-bar-wrap"><div class="tool-bar" style="--pct:70%"></div></div>
+              <div class="tool-pct">70%</div>
+            </a>
+
+            <a class="tool-card" href="https://github.com" target="_blank">
+              <div class="tool-logo">
+                <span style="color:#f05032">GIT</span>
+                <span style="color:#4caf50">GITHUB</span>
+              </div>
+              <div class="tool-name">Git & GitHub</div>
+              <div class="tool-bar-wrap"><div class="tool-bar" style="--pct:65%"></div></div>
+              <div class="tool-pct">65%</div>
+            </a>
+
+
+          </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section reveal">
+        <p class="section-tag">03 &nbsp; experience</p>
+        <h2>Where I've worked</h2>
+        <div class="exp-list">
+
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Backend Developer & Development Team Member</div>
+              <div class="exp-period">March 2026 — Present</div>
+            </div>
+            <div class="exp-company">@Ligaya Technology Solutions - StartUp Business</div>
+            <p class="exp-desc">Part of a development team handling commissioned projects for startups, students, and external clients. Developed backend systems, contributed to full-stack features, and supported hardware-related projects based on client requirements. Adapted to diverse project scopes, delivering functional and efficient solutions across both software and hardware.</p>
+            <div class="tags">
+              <span class="chip">FlutterFlow</span>
+              <span class="chip">C#</span>
+              <span class="chip">Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Web Developer</div>
+              <div class="exp-period">Feb 2025 — April 2025</div>
+            </div>
+            <div class="exp-company">@ Activeforce Corporation (SFELAPCO) - Internship</div>
+            <p class="exp-desc">Built responsive web pages and assisted in developing internal tools. Focused on clean UI structure, cross-device compatibility, and basic backend integration using modern web technologies.</p>
+            <div class="tags">
+              <span class="chip">HTML & CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">PHP</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">Data Annotator</div>
+              <div class="exp-period">February 2020 — January 2021</div>
+            </div>
+            <div class="exp-company">@ Remotasks  - Freelance</div>
+            <p class="exp-desc">Performed detailed 3D and LiDAR data annotation for machine learning datasets, annotating up to 320 frames per task with high accuracy in object labeling, segmentation, and spatial positioning.</p>
+            <p class="exp-desc">Reviewed and validated tasks from other annotators, identified errors, and contributed to AI model development by delivering precise annotated data.</p>
+            <div class="tags">
+              <span class="chip">3D LiDAR</span>
+              <span class="chip">Data Annotation</span>
+              <span class="chip">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-header">
+              <div class="exp-role">IT Technician</div>
+              <div class="exp-period">January 2020 — March 2025</div>
+            </div>
+            <div class="exp-company">@ Independent Contractor - Self Employed</div>
+            <p class="exp-desc">Handled computer repair, system troubleshooting, and custom PC builds. Set up networks, installed operating systems, and deployed CCTV systems, providing end-to-end technical support for clients.</p>
+            <div class="tags">
+              <span class="chip">Computer Repair</span>
+              <span class="chip">Network Setup</span>
+              <span class="chip">CCTV Installation</span>
+              <span class="chip">OS Installation & Repair</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section reveal">
+        <p class="section-tag">04 &nbsp; projects</p>
+        <h2>Things I've built</h2>
+        <div class="proj-grid">
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-icon">🛒</span>
+              <div class="proj-links"><a href="#">↗ live</a><a href="#">⎇ code</a></div>
+            </div>
+            <div class="proj-title">E-Commerce Platform</div>
+            <p class="proj-desc">Full-featured online store with cart, Stripe payments, real-time inventory, and admin dashboard.</p>
+            <div class="tags">
+              <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-icon">✅</span>
+              <div class="proj-links"><a href="#">↗ live</a><a href="#">⎇ code</a></div>
+            </div>
+            <div class="proj-title">Task Manager App</div>
+            <p class="proj-desc">Collaborative kanban board with real-time sync, team workspaces, and rich-text notes.</p>
+            <div class="tags">
+              <span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Tailwind</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-icon">🌤</span>
+              <div class="proj-links"><a href="#">↗ live</a><a href="#">⎇ code</a></div>
+            </div>
+            <div class="proj-title">Weather Dashboard</div>
+            <p class="proj-desc">Interactive weather app with 7-day forecasts, charts, and geolocation auto-detection.</p>
+            <div class="tags">
+              <span class="chip">JavaScript</span><span class="chip">Chart.js</span><span class="chip">OpenWeather</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-top">
+              <span class="proj-icon">💬</span>
+              <div class="proj-links"><a href="#">↗ live</a><a href="#">⎇ code</a></div>
+            </div>
+            <div class="proj-title">Real-time Chat App</div>
+            <p class="proj-desc">WebSocket-powered chat with rooms, typing indicators, and file sharing support.</p>
+            <div class="tags">
+              <span class="chip">Socket.io</span><span class="chip">Express</span><span class="chip">MongoDB</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="reveal">
+        <p class="section-tag">05 &nbsp; contact</p>
+        <h2>Get In Touch</h2>
+        <p class="lead">Have a project in mind or just want to say hello? Fill out the form below.</p>
+        <div class="contact-grid">
+
+          <div class="contact-form-wrap">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button class="btn submit-btn" id="submit-btn" onclick="handleSubmit()">
+              Send Message ↗
+            </button>
+            <p class="form-feedback" id="form-feedback"></p>
+          </div>
+
+          <div class="map-wrap">
+            <div class="map-label">
+              <span class="avail-dot"></span>
+              Santiago Compound, San Nicolas 2nd Betis Guagua, Pampanga, Philippines
+            </div>
+            <iframe
+              class="map-frame"
+              src="https://www.google.com/maps?q=14.97679,120.6439&z=15&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <p>&#169; 2026 Shawn. All Rights Reserved.</p>
+    </footer>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
