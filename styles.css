@@ -229,7 +229,7 @@ h2            { font-size: clamp(1rem, 2vw, 1.5rem); }
   width: calc(100% - 320px);
   height: 100%;
   background: var(--bg);
-  opacity: 0.96;
+  opacity: 0.95;
   pointer-events: none;
   z-index: 1;
 }
