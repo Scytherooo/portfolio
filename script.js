@@ -152,6 +152,112 @@ function showSection(id) {
   });
 }
 
+const projectData = [
+  {
+    icon: '🛒', title: 'E-Commerce Platform',
+    desc: 'Full-featured online store with cart, Stripe payments, real-time inventory, and admin dashboard.',
+    chips: ['React','Node.js','PostgreSQL'],
+    slides: [
+      { img: 'screenshots/ecom-1.png', caption: 'Homepage — product listing & hero banner' },
+      { img: 'screenshots/ecom-2.png', caption: 'Product detail page with image gallery' },
+      { img: 'screenshots/ecom-3.png', caption: 'Shopping cart & checkout flow' },
+      { img: 'screenshots/ecom-4.png', caption: 'Admin dashboard — inventory management' },
+    ]
+  },
+  {
+    icon: '✅', title: 'Task Manager App',
+    desc: 'Collaborative kanban board with real-time sync, team workspaces, and rich-text notes.',
+    chips: ['Next.js','Supabase','Tailwind'],
+    slides: [
+      { img: 'screenshots/task-1.png', caption: 'Kanban board — drag & drop columns' },
+      { img: 'screenshots/task-2.png', caption: 'Task detail modal with rich-text editor' },
+      { img: 'screenshots/task-3.png', caption: 'Team workspace — member management' },
+    ]
+  },
+  {
+    icon: '🌤', title: 'Weather Dashboard',
+    desc: 'Interactive weather app with 7-day forecasts, charts, and geolocation auto-detection.',
+    chips: ['JavaScript','Chart.js','OpenWeather'],
+    slides: [
+      { img: 'screenshots/weather-1.png', caption: 'Main dashboard — current conditions & forecast' },
+      { img: 'screenshots/weather-2.png', caption: '7-day chart — temperature & precipitation' },
+      { img: 'screenshots/weather-3.png', caption: 'Location search with auto-detection' },
+    ]
+  },
+  {
+    icon: '💬', title: 'Real-time Chat App',
+    desc: 'WebSocket-powered chat with rooms, typing indicators, and file sharing support.',
+    chips: ['Socket.io','Express','MongoDB'],
+    slides: [
+      { img: 'screenshots/chat-1.png', caption: 'Chat room — messages & typing indicators' },
+      { img: 'screenshots/chat-2.png', caption: 'File sharing — drag & drop upload' },
+      { img: 'screenshots/chat-3.png', caption: 'Room list & user presence sidebar' },
+    ]
+  },
+  {
+    icon: '💬', title: 'Real-time Chat App',
+    desc: 'WebSocket-powered chat with rooms, typing indicators, and file sharing support.',
+    chips: ['Socket.io','Express','MongoDB'],
+    slides: [
+      { img: 'screenshots/chat-1.png', caption: 'Chat room — messages & typing indicators' },
+      { img: 'screenshots/chat-2.png', caption: 'File sharing — drag & drop upload' },
+      { img: 'screenshots/chat-3.png', caption: 'Room list & user presence sidebar' },
+    ]
+  },
+];
+
+let pmCurrent = 0, pmProject = null;
+
+function openProjectModal(idx) {
+  pmProject = projectData[idx]; pmCurrent = 0;
+  document.getElementById('pm-icon').textContent = pmProject.icon;
+  document.getElementById('pm-title').textContent = pmProject.title;
+  document.getElementById('pm-desc').textContent = pmProject.desc;
+  document.getElementById('pm-chips').innerHTML = pmProject.chips.map(c=>`<span class="chip">${c}</span>`).join('');
+  renderPmSlides();
+  document.getElementById('proj-backdrop').classList.add('open');
+}
+
+function renderPmSlides() {
+  document.getElementById('pm-slides').innerHTML = pmProject.slides.map((s,i)=>`
+    <div class="proj-slide ${i===0?'active':''}">
+      <div class="proj-slide-placeholder">
+        <img src="${s.img}" onerror="this.style.display='none'" alt="${s.caption}">
+        <span class="proj-placeholder-icon">${pmProject.icon}</span>
+        <span class="proj-placeholder-label">// screenshot_${i+1}.png</span>
+      </div>
+      <div class="proj-slide-caption">
+        <span class="proj-caption-num">[${String(i+1).padStart(2,'0')}/${pmProject.slides.length}]</span>
+        <span class="proj-caption-text">${s.caption}</span>
+      </div>
+    </div>`).join('');
+  document.getElementById('pm-dots').innerHTML = pmProject.slides.map((_,i)=>
+    `<div class="proj-dot ${i===0?'active':''}" onclick="pmGoTo(${i})"></div>`).join('');
+  updatePmNav();
+}
+
+function changeSlide(dir) { pmGoTo(pmCurrent + dir); }
+function pmGoTo(idx) {
+  const slides = document.querySelectorAll('.proj-slide');
+  const dots = document.querySelectorAll('.proj-dot');
+  if (idx < 0 || idx >= slides.length) return;
+  slides[pmCurrent].classList.remove('active');
+  dots[pmCurrent].classList.remove('active');
+  pmCurrent = idx;
+  slides[pmCurrent].classList.add('active');
+  dots[pmCurrent].classList.add('active');
+  updatePmNav();
+}
+function updatePmNav() {
+  document.getElementById('pm-prev').disabled = pmCurrent === 0;
+  document.getElementById('pm-next').disabled = pmCurrent === pmProject.slides.length - 1;
+}
+function closeProjectModal() { document.getElementById('proj-backdrop').classList.remove('open'); }
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProjectModal(); });
+document.getElementById('proj-backdrop').addEventListener('click', e => {
+  if (e.target.id === 'proj-backdrop') closeProjectModal();
+});
+
 // ── contact form ──
 function handleSubmit() {
   const btn      = document.getElementById('submit-btn');

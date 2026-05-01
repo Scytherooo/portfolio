@@ -11,6 +11,31 @@
 </head>
 <body>
 
+  <!-- PROJECT MODAL -->
+<div class="proj-modal-backdrop" id="proj-backdrop">
+  <div class="proj-modal" id="proj-modal">
+    <div class="proj-modal-header">
+      <div class="proj-modal-title-row">
+        <span id="pm-icon"></span>
+        <span class="proj-modal-title" id="pm-title"></span>
+      </div>
+      <button class="proj-close-btn" onclick="closeProjectModal()">[ ESC ]</button>
+    </div>
+    <div class="proj-slideshow">
+      <div id="pm-slides"></div>
+      <div class="proj-slide-nav">
+        <button class="proj-nav-btn" id="pm-prev" onclick="changeSlide(-1)">◀ prev</button>
+        <div class="proj-dots" id="pm-dots"></div>
+        <button class="proj-nav-btn" id="pm-next" onclick="changeSlide(1)">next ▶</button>
+      </div>
+    </div>
+    <div class="proj-modal-body">
+      <p class="proj-modal-desc" id="pm-desc"></p>
+      <div class="proj-modal-chips" id="pm-chips"></div>
+    </div>
+  </div>
+</div>
+
 <div class="layout">
 
   <!-- LEFT PANEL -->
@@ -271,51 +296,58 @@
       <!-- PROJECTS -->
       <section id="projects" class="section reveal">
         <p class="section-tag">04 &nbsp; projects</p>
-        <h2>Things I've built</h2>
+        <h2>Things I've built   -   Click to reveal</h2>
         <div class="proj-grid">
 
-          <div class="proj-card">
+          <div class="proj-card" onclick="openProjectModal(0)">
             <div class="proj-top">
-              <span class="proj-icon">🛒</span>
-              <div class="proj-links"><a href="#">↗ live</a></div>
+              <span class="proj-icon">SRUVA</span>
             </div>
-            <div class="proj-title">E-Commerce Platform</div>
+            <div class="proj-title">Fund Collector and Loan Tracker Platform</div>
             <p class="proj-desc">Full-featured online store with cart, Stripe payments, real-time inventory, and admin dashboard.</p>
             <div class="tags">
               <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">PostgreSQL</span>
             </div>
           </div>
 
-          <div class="proj-card">
+          <div class="proj-card" onclick="openProjectModal(1)">
             <div class="proj-top">
-              <span class="proj-icon">✅</span>
-              <div class="proj-links"><a href="#">↗ live</a></div>
+              <span class="proj-icon">LMS</span>
             </div>
-            <div class="proj-title">Task Manager App</div>
+            <div class="proj-title">Loan Management System</div>
             <p class="proj-desc">Collaborative kanban board with real-time sync, team workspaces, and rich-text notes.</p>
             <div class="tags">
               <span class="chip">Next.js</span><span class="chip">Supabase</span><span class="chip">Tailwind</span>
             </div>
           </div>
 
-          <div class="proj-card">
+          <div class="proj-card" onclick="openProjectModal(2)">
             <div class="proj-top">
-              <span class="proj-icon">🌤</span>
-              <div class="proj-links"><a href="#">↗ live</a></div>
+              <span class="proj-icon">Java Netbeans</span>
             </div>
-            <div class="proj-title">Weather Dashboard</div>
+            <div class="proj-title">Quiz Application</div>
             <p class="proj-desc">Interactive weather app with 7-day forecasts, charts, and geolocation auto-detection.</p>
             <div class="tags">
               <span class="chip">JavaScript</span><span class="chip">Chart.js</span><span class="chip">OpenWeather</span>
             </div>
           </div>
 
-          <div class="proj-card">
+          <div class="proj-card" onclick="openProjectModal(3)">
             <div class="proj-top">
-              <span class="proj-icon">💬</span>
-              <div class="proj-links"><a href="#">↗ live</a></div>
+              <span class="proj-icon">Calculator Python</span>
             </div>
-            <div class="proj-title">Real-time Chat App</div>
+            <div class="proj-title">Calculator Application</div>
+            <p class="proj-desc">WebSocket-powered chat with rooms, typing indicators, and file sharing support.</p>
+            <div class="tags">
+              <span class="chip">Socket.io</span><span class="chip">Express</span><span class="chip">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="proj-card" onclick="openProjectModal(4)">
+            <div class="proj-top">
+              <span class="proj-icon">Harware Circuits and Microcontrollers</span>
+            </div>
+            <div class="proj-title">Hardware Projects</div>
             <p class="proj-desc">WebSocket-powered chat with rooms, typing indicators, and file sharing support.</p>
             <div class="tags">
               <span class="chip">Socket.io</span><span class="chip">Express</span><span class="chip">MongoDB</span>
