@@ -154,9 +154,9 @@ function showSection(id) {
 
 const projectData = [
   {
-    icon: '🛒', title: 'E-Commerce Platform',
+    icon: 'SRUVA', title: 'Fund Collector and Loan Tracker Platform',
     desc: 'Full-featured online store with cart, Stripe payments, real-time inventory, and admin dashboard.',
-    chips: ['React','Node.js','PostgreSQL'],
+    chips: ['Pycharm','Tkinter GUI','MySQL Database'],
     slides: [
       { img: 'screenshots/ecom-1.png', caption: 'Homepage — product listing & hero banner' },
       { img: 'screenshots/ecom-2.png', caption: 'Product detail page with image gallery' },
@@ -165,9 +165,9 @@ const projectData = [
     ]
   },
   {
-    icon: '✅', title: 'Task Manager App',
+    icon: 'LMS', title: 'Loan Management System',
     desc: 'Collaborative kanban board with real-time sync, team workspaces, and rich-text notes.',
-    chips: ['Next.js','Supabase','Tailwind'],
+    chips: ['JavaScript','Netbeans','MySQL Database'],
     slides: [
       { img: 'screenshots/task-1.png', caption: 'Kanban board — drag & drop columns' },
       { img: 'screenshots/task-2.png', caption: 'Task detail modal with rich-text editor' },
@@ -175,9 +175,9 @@ const projectData = [
     ]
   },
   {
-    icon: '🌤', title: 'Weather Dashboard',
+    icon: 'JavaQuizApp', title: 'Java Quiz Application',
     desc: 'Interactive weather app with 7-day forecasts, charts, and geolocation auto-detection.',
-    chips: ['JavaScript','Chart.js','OpenWeather'],
+    chips: ['JavaScript','Netbeans'],
     slides: [
       { img: 'screenshots/weather-1.png', caption: 'Main dashboard — current conditions & forecast' },
       { img: 'screenshots/weather-2.png', caption: '7-day chart — temperature & precipitation' },
@@ -185,9 +185,9 @@ const projectData = [
     ]
   },
   {
-    icon: '💬', title: 'Real-time Chat App',
+    icon: 'Calculator Python', title: 'Calculator Application',
     desc: 'WebSocket-powered chat with rooms, typing indicators, and file sharing support.',
-    chips: ['Socket.io','Express','MongoDB'],
+    chips: ['Pycharm','Numpy','Tkinter GUI'],
     slides: [
       { img: 'screenshots/chat-1.png', caption: 'Chat room — messages & typing indicators' },
       { img: 'screenshots/chat-2.png', caption: 'File sharing — drag & drop upload' },
@@ -195,9 +195,9 @@ const projectData = [
     ]
   },
   {
-    icon: '💬', title: 'Real-time Chat App',
+    icon: 'Harware Circuits and Microcontrollers', title: 'Hardware Projects',
     desc: 'WebSocket-powered chat with rooms, typing indicators, and file sharing support.',
-    chips: ['Socket.io','Express','MongoDB'],
+    chips: ['Proteus','Machine Learning','Hardware Fabrication'],
     slides: [
       { img: 'screenshots/chat-1.png', caption: 'Chat room — messages & typing indicators' },
       { img: 'screenshots/chat-2.png', caption: 'File sharing — drag & drop upload' },
