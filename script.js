@@ -236,7 +236,6 @@ function renderPmSlides() {
       <div class="proj-slide-placeholder">
         <img src="${s.img}" onerror="this.style.display='none'" alt="${s.caption}">
         <span class="proj-placeholder-icon">${pmProject.icon}</span>
-        <span class="proj-placeholder-label">// screenshot_${i+1}.png</span>
       </div>
       <div class="proj-slide-caption">
         <span class="proj-caption-num">[${String(i+1).padStart(2,'0')}/${pmProject.slides.length}]</span>
