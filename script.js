@@ -158,10 +158,22 @@ const projectData = [
     desc: 'Full-featured online store with cart, Stripe payments, real-time inventory, and admin dashboard.',
     chips: ['Pycharm','Tkinter GUI','MySQL Database'],
     slides: [
-      { img: 'screenshots/ecom-1.png', caption: 'Homepage — product listing & hero banner' },
-      { img: 'screenshots/ecom-2.png', caption: 'Product detail page with image gallery' },
-      { img: 'screenshots/ecom-3.png', caption: 'Shopping cart & checkout flow' },
-      { img: 'screenshots/ecom-4.png', caption: 'Admin dashboard — inventory management' },
+      { img: 'SRUVA/login.png', caption: 'A clean, branded sign-up interface for administrative access control.' },
+      { img: 'SRUVA/main.png', caption: 'Real-time visualization of total funds, membership counts, and daily collection metrics.' },
+      { img: 'SRUVA/members.png', caption: 'A comprehensive CRUD system for managing detailed vendor information and registration.' },
+      { img: 'SRUVA/contri.png', caption: 'Automated logging and verification of member fund collections with real-time updates.' },
+      { img: 'SRUVA/update.png', caption: 'Integrated calculator and tracker for managing loan IDs, interest rates, and payment schedules.' },
+    ]
+  },
+     {
+    icon: 'Whack A Wally', title: 'Android App',
+    desc: 'This project is a fast-paced mobile game inspired by classic arcade mechanics. The application leverages Flutters cross-platform capabilities to deliver a responsive experience across different devices.',
+    chips: ['Android Studio','Flutter','Dart'],
+    slides: [
+      { img: 'Whack/intro.jpg', caption: 'An engaging welcome screen introducing "Whack-a-Wally!" as a fast-paced arcade experience designed for all ages.' },
+      { img: 'Whack/tuts.jpg', caption: 'A clear "How to Play" guide detailing game objectives, touch/mouse controls, and scoring mechanics.' },
+      { img: 'Whack/start.jpg', caption: 'A showcase of the games vibrant pixel-art environment, including the forest backdrop and character sprites.' },
+      { img: 'Whack/game.jpg', caption: 'The active game screen featuring a 3x3 grid of holes, real-time score tracking, and a countdown timer.' },
     ]
   },
   {
@@ -169,9 +181,12 @@ const projectData = [
     desc: 'Collaborative kanban board with real-time sync, team workspaces, and rich-text notes.',
     chips: ['JavaScript','Netbeans','MySQL Database'],
     slides: [
-      { img: 'screenshots/task-1.png', caption: 'Kanban board — drag & drop columns' },
-      { img: 'screenshots/task-2.png', caption: 'Task detail modal with rich-text editor' },
-      { img: 'screenshots/task-3.png', caption: 'Team workspace — member management' },
+      { img: 'LMS/login.png', caption: 'A clean, branded sign-up interface for administrative access control.' },
+      { img: 'LMS/welcome.png', caption: 'Real-time visualization of total funds, membership counts, and daily collection metrics.' },
+      { img: 'LMS/dashboard.png', caption: 'A comprehensive CRUD system for managing detailed vendor information and registration.' },
+      { img: 'LMS/members.png', caption: 'Automated logging and verification of member fund collections with real-time updates.' },
+      { img: 'LMS/contri.png', caption: 'Integrated calculator and tracker for managing loan IDs, interest rates, and payment schedules.' },
+      { img: 'LMS/loan.png', caption: 'Integrated calculator and tracker for managing loan IDs, interest rates, and payment schedules.' },
     ]
   },
   {
@@ -179,9 +194,7 @@ const projectData = [
     desc: 'Interactive weather app with 7-day forecasts, charts, and geolocation auto-detection.',
     chips: ['JavaScript','Netbeans'],
     slides: [
-      { img: 'screenshots/weather-1.png', caption: 'Main dashboard — current conditions & forecast' },
-      { img: 'screenshots/weather-2.png', caption: '7-day chart — temperature & precipitation' },
-      { img: 'screenshots/weather-3.png', caption: 'Location search with auto-detection' },
+      { img: 'Netbeans/quiz.png', caption: 'Main dashboard — current conditions & forecast' },
     ]
   },
   {
@@ -189,19 +202,18 @@ const projectData = [
     desc: 'WebSocket-powered chat with rooms, typing indicators, and file sharing support.',
     chips: ['Pycharm','Numpy','Tkinter GUI'],
     slides: [
-      { img: 'screenshots/chat-1.png', caption: 'Chat room — messages & typing indicators' },
-      { img: 'screenshots/chat-2.png', caption: 'File sharing — drag & drop upload' },
-      { img: 'screenshots/chat-3.png', caption: 'Room list & user presence sidebar' },
+      { img: 'Calc/calc.png', caption: 'Chat room — messages & typing indicators' },
     ]
   },
   {
     icon: 'Harware Circuits and Microcontrollers', title: 'Hardware Projects',
     desc: 'WebSocket-powered chat with rooms, typing indicators, and file sharing support.',
-    chips: ['Proteus','Machine Learning','Hardware Fabrication'],
+    chips: ['Proteus','Machine Learning','Hardware Fabrication', 'KiCad'],
     slides: [
-      { img: 'screenshots/chat-1.png', caption: 'Chat room — messages & typing indicators' },
-      { img: 'screenshots/chat-2.png', caption: 'File sharing — drag & drop upload' },
-      { img: 'screenshots/chat-3.png', caption: 'Room list & user presence sidebar' },
+      { img: 'HardwareCircuits/thesis.jpg', caption: 'ANAILYTICS: A Non-Invasive Pre-Diagnosis of Iron Deficiency Anemia, Chronic Kidney Disease, and Vitamin B12 Deficiency Through Fingernail Analysis' },
+      { img: 'HardwareCircuits/psu.jpg', caption: 'A hand-soldered power supply circuit on a perfboard, integrating a transformer and voltage regulation.' },
+      { img: 'HardwareCircuits/psu-layout.png', caption: 'SPICE simulation of a linear regulated power supply using an LM317T for precise voltage control.' },
+      { img: 'HardwareCircuits/kicadact.png', caption: 'Detailed circuit mapping of an embedded system featuring CD74HC4067M multiplexers.' },
     ]
   },
 ];

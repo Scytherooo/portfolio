@@ -621,7 +621,7 @@ h2            { font-size: clamp(1rem, 2vw, 1.5rem); }
 }
 
 /* projects */
-.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.proj-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
 
 .proj-card {
   padding: 1.5rem;
